@@ -1,11 +1,12 @@
 package io.github.Jadiefication
 
+import io.github.Jadiefication.recipe.NodalCableRecipe
 import org.bukkit.plugin.java.JavaPlugin
 
-class Nodal : JavaPlugin() {
+object Nodal : JavaPlugin() {
 
     override fun onEnable() {
-        // Plugin startup logic
+        server.addRecipe(NodalCableRecipe.cableRecipe)
     }
 
     override fun onDisable() {
