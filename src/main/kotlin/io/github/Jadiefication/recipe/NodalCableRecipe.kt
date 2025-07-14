@@ -4,6 +4,8 @@ import io.github.Jadiefication.Nodal
 import io.papermc.paper.datacomponent.DataComponentType
 import io.papermc.paper.datacomponent.DataComponentTypes
 import io.papermc.paper.datacomponent.item.CustomModelData
+import io.papermc.paper.datacomponent.item.ItemLore
+import net.kyori.adventure.text.Component
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
 import org.bukkit.inventory.ItemStack
@@ -19,6 +21,8 @@ object NodalCableRecipe {
             .addFlag(true)
             .build()
         )
+        setData(DataComponentTypes.ITEM_NAME, Component.text("Cable"))
+        setData(DataComponentTypes.LORE, ItemLore.lore().addLine(Component.text("A cable to connect stuff")).build());
     }
     val cableRecipe = ShapedRecipe(key, chorusFlower).apply {
         shape(
