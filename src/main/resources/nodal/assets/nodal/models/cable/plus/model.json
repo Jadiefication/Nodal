@@ -1,0 +1,37 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "minecraft:cable/plus/texture",
+		"particle": "minecraft:cable/plus/texture"
+	},
+	"elements": [
+		{
+			"from": [0.001, 7.001, 7.001],
+			"to": [15.999, 8.999, 8.999],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 7, 7]},
+			"faces": {
+				"north": {"uv": [2, 2, 10, 3], "texture": "#0"},
+				"east": {"uv": [4, 6, 5, 7], "texture": "#0"},
+				"south": {"uv": [2, 3, 10, 4], "texture": "#0"},
+				"west": {"uv": [5, 6, 6, 7], "texture": "#0"},
+				"up": {"uv": [10, 5, 2, 4], "texture": "#0"},
+				"down": {"uv": [10, 5, 2, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 7, 0],
+			"to": [9, 9, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 7, 9]},
+			"faces": {
+				"north": {"uv": [2, 6, 3, 7], "texture": "#0"},
+				"east": {"uv": [0, 0, 8, 1], "texture": "#0"},
+				"south": {"uv": [3, 6, 4, 7], "texture": "#0"},
+				"west": {"uv": [0, 1, 8, 2], "texture": "#0"},
+				"up": {"uv": [1, 10, 0, 2], "texture": "#0"},
+				"down": {"uv": [2, 2, 1, 10], "texture": "#0"}
+			}
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "minecraft:cable/normal1/texture",
+		"particle": "minecraft:cable/normal1/texture"
+	},
+	"elements": [
+		{
+			"from": [0, 7, 7],
+			"to": [16, 9, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 7, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 1], "texture": "#0"},
+				"east": {"uv": [2, 3, 3, 4], "texture": "#0"},
+				"south": {"uv": [0, 1, 8, 2], "texture": "#0"},
+				"west": {"uv": [2, 2, 3, 3], "texture": "#0"},
+				"up": {"uv": [8, 1, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0.9375, 8, 0], "texture": "#0"}
+			}
+		}
+	]
+}
