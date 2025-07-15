@@ -15,7 +15,7 @@ import org.bukkit.inventory.meta.components.CustomModelDataComponent
 object NodalCableRecipe {
 
     private val key = NamespacedKey(Nodal, "cable")
-    private val chorusFlower = ItemStack.of(Material.CHORUS_FLOWER).apply {
+    val chorusFlower = ItemStack.of(Material.CHORUS_PLANT).apply {
         setData(DataComponentTypes.CUSTOM_MODEL_DATA, CustomModelData.customModelData()
             .addFloat(1f)
             .addFlag(true)
