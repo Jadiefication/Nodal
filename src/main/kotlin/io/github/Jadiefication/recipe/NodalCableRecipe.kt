@@ -12,7 +12,7 @@ import org.bukkit.inventory.ShapedRecipe
 
 object NodalCableRecipe {
 
-    private val key = NamespacedKey(Nodal, "cable")
+    private val key = NamespacedKey(Nodal.plugin, "cable")
     val cable = ItemStack.of(Material.MUSHROOM_STEM).apply {
         setData(DataComponentTypes.CUSTOM_MODEL_DATA, CustomModelData.customModelData()
             .addFloat(1f)
