@@ -14,19 +14,19 @@ object NodalCableRecipe {
 
     private val key = NamespacedKey(Nodal.plugin, "cable")
     val cable = ItemStack.of(Material.MUSHROOM_STEM).apply {
-        setData(DataComponentTypes.CUSTOM_MODEL_DATA, CustomModelData.customModelData()
+        /*setData(DataComponentTypes.CUSTOM_MODEL_DATA, CustomModelData.customModelData()
             .addFloat(1f)
             .addFlag(true)
             .build()
-        )
+        )*/
         setData(DataComponentTypes.ITEM_NAME, Component.text("Cable"))
         setData(DataComponentTypes.LORE, ItemLore.lore().addLine(Component.text("A cable to connect stuff")).build());
     }
     val cableRecipe = ShapedRecipe(key, cable).apply {
         shape(
-            "",
+            "   ",
             "QDQ",
-            ""
+            "   "
         )
         setIngredient('Q', Material.QUARTZ)
         setIngredient('D', Material.DIAMOND)

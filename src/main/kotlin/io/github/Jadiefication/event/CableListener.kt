@@ -23,7 +23,7 @@ private val positions = buildList {
     }
 }
 
-private val directionToFace: Map<Vector, BlockFace> = mapOf(
+/*private val directionToFace: Map<Vector, BlockFace> = mapOf(
     Vector(0, 1, 0) to BlockFace.UP,
     Vector(0, -1, 0) to BlockFace.DOWN,
     Vector(1, 0, 0) to BlockFace.EAST,
@@ -57,7 +57,7 @@ fun onCablePlace(
             mainBlock.blockData = data
         }
     }
-}
+}*/
 
 private fun getNeighbours(
     pos: Location
