@@ -80,7 +80,7 @@ object CableDataHandler {
         up: Boolean = false,
         west: Boolean = false
     ): BlockData {
-        val blockData = Material.CHORUS_PLANT.createBlockData() as MultipleFacing
+        val blockData = Material.MUSHROOM_STEM.createBlockData() as MultipleFacing
 
         if (down) blockData.setFace(BlockFace.DOWN, true)
         if (east) blockData.setFace(BlockFace.EAST, true)

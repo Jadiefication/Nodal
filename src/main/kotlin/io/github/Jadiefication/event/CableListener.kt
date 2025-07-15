@@ -37,7 +37,7 @@ private val directionToFace: Map<Vector, BlockFace> = mapOf(
 fun onCablePlace(
     event: BlockPlaceEvent
 ) {
-    if (event.itemInHand == NodalCableRecipe.chorusFlower) {
+    if (event.itemInHand == NodalCableRecipe.cable) {
         val loc = event.blockPlaced.location
         val neighbours = getNeighbours(loc)
         val mainBlock = event.blockPlaced
@@ -67,7 +67,7 @@ private fun getNeighbours(
         .map { offset -> pos.clone().add(offset) }
         .mapNotNull { loc ->
             val block = world.getBlockAt(loc)
-            if (block.type == Material.CHORUS_PLANT && CableDataHandler.hasBlockData(block.blockData)) {
+            if (block.type == Material.MUSHROOM_STEM && CableDataHandler.hasBlockData(block.blockData)) {
                 block to loc
             } else null
         }

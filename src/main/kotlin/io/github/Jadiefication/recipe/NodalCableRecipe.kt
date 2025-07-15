@@ -1,7 +1,6 @@
 package io.github.Jadiefication.recipe
 
 import io.github.Jadiefication.Nodal
-import io.papermc.paper.datacomponent.DataComponentType
 import io.papermc.paper.datacomponent.DataComponentTypes
 import io.papermc.paper.datacomponent.item.CustomModelData
 import io.papermc.paper.datacomponent.item.ItemLore
@@ -10,12 +9,11 @@ import org.bukkit.Material
 import org.bukkit.NamespacedKey
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.ShapedRecipe
-import org.bukkit.inventory.meta.components.CustomModelDataComponent
 
 object NodalCableRecipe {
 
     private val key = NamespacedKey(Nodal, "cable")
-    val chorusFlower = ItemStack.of(Material.CHORUS_PLANT).apply {
+    val cable = ItemStack.of(Material.MUSHROOM_STEM).apply {
         setData(DataComponentTypes.CUSTOM_MODEL_DATA, CustomModelData.customModelData()
             .addFloat(1f)
             .addFlag(true)
@@ -24,7 +22,7 @@ object NodalCableRecipe {
         setData(DataComponentTypes.ITEM_NAME, Component.text("Cable"))
         setData(DataComponentTypes.LORE, ItemLore.lore().addLine(Component.text("A cable to connect stuff")).build());
     }
-    val cableRecipe = ShapedRecipe(key, chorusFlower).apply {
+    val cableRecipe = ShapedRecipe(key, cable).apply {
         shape(
             "",
             "QDQ",
