@@ -1,6 +1,9 @@
 package io.github.Jadiefication.recipe
 
 import io.github.Jadiefication.Nodal
+import io.github.Jadiefication.cable.CableMechanic
+import io.github.Jadiefication.redstoneflux.api.items.ItemsFactory
+import io.github.Jadiefication.redstoneflux.api.mechanics.EnergyTransporter
 import io.papermc.paper.datacomponent.DataComponentTypes
 import io.papermc.paper.datacomponent.item.CustomModelData
 import io.papermc.paper.datacomponent.item.ItemLore
@@ -20,7 +23,12 @@ object NodalCableRecipe {
             .build()
         )*/
         setData(DataComponentTypes.ITEM_NAME, Component.text("Cable"))
-        setData(DataComponentTypes.LORE, ItemLore.lore().addLine(Component.text("A cable to connect stuff")).build());
+        setData(DataComponentTypes.LORE, ItemLore.lore().addLine(Component.text("A cable to connect stuff")).build())
+
+        ItemsFactory.registerItemHolder<EnergyTransporter> {
+            item = this@apply
+            mechanic = CableMechanic()
+        }
     }
     val cableRecipe = ShapedRecipe(key, cable).apply {
         shape(
