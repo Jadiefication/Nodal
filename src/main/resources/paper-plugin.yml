@@ -2,3 +2,8 @@ name: Nodal
 version: '1.0-SNAPSHOT'
 main: io.github.Jadiefication.Nodal
 api-version: '1.21'
+dependencies:
+  server:
+    RedstoneFlux:
+      load: BEFORE
+      required: true
