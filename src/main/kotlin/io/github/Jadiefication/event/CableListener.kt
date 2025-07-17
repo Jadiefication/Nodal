@@ -1,14 +1,9 @@
 package io.github.Jadiefication.event
 
 import io.github.Jadiefication.cable.CableDataHandler
-import io.github.Jadiefication.recipe.NodalCableRecipe
 import org.bukkit.Location
 import org.bukkit.Material
 import org.bukkit.block.Block
-import org.bukkit.block.BlockFace
-import org.bukkit.block.data.MultipleFacing
-import org.bukkit.event.EventHandler
-import org.bukkit.event.block.BlockPlaceEvent
 import org.bukkit.util.Vector
 
 private val positions = buildList {

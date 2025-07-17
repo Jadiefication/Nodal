@@ -1,6 +1,6 @@
 package io.github.Jadiefication
 
-import io.github.Jadiefication.recipe.NodalCableRecipe
+import io.github.Jadiefication.cable.recipe.NodalCableRecipe
 import org.bukkit.plugin.java.JavaPlugin
 
 class Nodal : JavaPlugin() {
