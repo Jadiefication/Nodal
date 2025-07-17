@@ -9,16 +9,23 @@ class CableMechanic : EnergyStorage, EnergyTransporter {
     override var storedEnergy: Double = 0.0
 
     override fun consumeEnergy(energyTaken: Double): Double {
-        TODO("Not yet implemented")
+        return if (energyTaken <= storedEnergy) {
+            storedEnergy -= energyTaken
+            energyTaken
+        } else {
+            val consumed = storedEnergy
+            storedEnergy = 0.0
+            consumed
+        }
     }
 
     override fun storeEnergy(energyStored: Double): Double {
-        val spaceLeft = maximumCapacity - this.storedEnergy
+        val spaceLeft = maximumCapacity - storedEnergy
         return if (energyStored <= spaceLeft) {
-            this.storedEnergy += energyStored
+            storedEnergy += energyStored
             energyStored
         } else {
-            this.storedEnergy = maximumCapacity
+            storedEnergy = maximumCapacity
             spaceLeft
         }
     }
