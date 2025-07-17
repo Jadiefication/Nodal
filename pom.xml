@@ -94,7 +94,7 @@
         <dependency>
             <groupId>com.github.Jadiefication</groupId>
             <artifactId>RedstoneFlux</artifactId>
-            <version>v1.2.1</version>
+            <version>v1.3.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
