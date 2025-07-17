@@ -15,14 +15,7 @@ import org.bukkit.inventory.ShapedRecipe
 object NodalCableRecipe {
 
     private val key = NamespacedKey(Nodal.plugin, "cable")
-    private val energyTypeKey = NamespacedKey("redstoneflux", "energy-type")
-    private val mechanicClassKey = NamespacedKey("redstoneflux", "mechanic-class")
     val cable = ItemStack.of(Material.MUSHROOM_STEM).apply {
-        /*setData(DataComponentTypes.CUSTOM_MODEL_DATA, CustomModelData.customModelData()
-            .addFloat(1f)
-            .addFlag(true)
-            .build()
-        )*/
         setData(DataComponentTypes.ITEM_NAME, Component.text("Cable"))
         setData(DataComponentTypes.LORE, ItemLore.lore().addLine(Component.text("A cable to connect stuff")).build())
 
