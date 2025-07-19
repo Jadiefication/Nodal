@@ -1,8 +1,6 @@
 package io.github.Jadiefication.controller.recipe
 
 import io.github.Jadiefication.Nodal
-import io.github.Jadiefication.cable.CableComponent
-import io.github.Jadiefication.cable.CableMechanic
 import io.github.Jadiefication.controller.ControllerComponent
 import io.github.Jadiefication.controller.EnergyController
 import io.github.Jadiefication.redstoneflux.api.items.ItemsFactory
@@ -26,7 +24,7 @@ object NodalControllerRecipe {
             mechanic = ControllerComponent()
         }
     }
-    val cableRecipe = ShapedRecipe(key, controller).apply {
+    val controllerRecipe = ShapedRecipe(key, controller).apply {
         shape(
             "NNN",
             "NSN",
