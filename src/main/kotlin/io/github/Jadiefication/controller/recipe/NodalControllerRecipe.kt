@@ -18,8 +18,8 @@ object NodalControllerRecipe {
     val controller = ItemStack.of(Material.OBSIDIAN).apply {
         setData(DataComponentTypes.ITEM_NAME, Component.text("Controller"))
         setData(DataComponentTypes.LORE, ItemLore.lore().addLine(Component.text("The base for starting your digital storage")).build())
-
-        ItemsFactory.registerItemHolder<EnergyController> {
+    }.apply {
+        ItemsFactory.registerItemHolder {
             item = this@apply
             mechanic = ControllerComponent()
         }

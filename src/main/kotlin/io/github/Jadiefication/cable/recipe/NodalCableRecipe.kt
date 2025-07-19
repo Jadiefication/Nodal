@@ -18,8 +18,8 @@ object NodalCableRecipe {
     val cable = ItemStack.of(Material.MUSHROOM_STEM).apply {
         setData(DataComponentTypes.ITEM_NAME, Component.text("Cable"))
         setData(DataComponentTypes.LORE, ItemLore.lore().addLine(Component.text("A cable to connect stuff")).build())
-
-        ItemsFactory.registerItemHolder<CableMechanic> {
+    }.apply {
+        ItemsFactory.registerItemHolder {
             item = this@apply
             mechanic = CableComponent()
         }
