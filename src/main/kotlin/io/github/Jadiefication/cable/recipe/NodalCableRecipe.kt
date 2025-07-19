@@ -15,15 +15,15 @@ import org.bukkit.inventory.ShapedRecipe
 object NodalCableRecipe {
 
     private val key = NamespacedKey(Nodal.plugin, "cable")
-    val cable = ItemStack.of(Material.MUSHROOM_STEM).apply {
-        setData(DataComponentTypes.ITEM_NAME, Component.text("Cable"))
-        setData(DataComponentTypes.LORE, ItemLore.lore().addLine(Component.text("A cable to connect stuff")).build())
-    }.apply {
-        ItemsFactory.registerItemHolder {
-            item = this@apply
-            mechanic = CableComponent()
-        }
+    private val cableComponent = CableComponent()
+
+    val cable: ItemStack = ItemsFactory.registerItem {
+        item = Material.MUSHROOM_STEM
+        name = Component.text("Cable")
+        lore = ItemLore.lore().addLine(Component.text("A cable to connect stuff")).build()
+        mechanic = cableComponent
     }
+
     val cableRecipe = ShapedRecipe(key, cable).apply {
         shape(
             "   ",
