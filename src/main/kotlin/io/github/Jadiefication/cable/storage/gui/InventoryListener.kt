@@ -7,7 +7,7 @@ import org.bukkit.event.inventory.InventoryOpenEvent
 @EventHandler
 fun onInventoryOpen(event: InventoryOpenEvent) {
     val holder = event.inventory.holder as? StorageBusGui ?: return
-    holder.saveToBlock()
+    holder.loadFromBlock()
 }
 
 @EventHandler
