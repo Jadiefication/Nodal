@@ -14,7 +14,7 @@ class StorageBusMechanic : EnergyTransporter, InteractableMechanic {
     }
 
     override fun onLeftClick(event: PlayerInteractEvent?) {
-        onRightClick(event)
+        return
     }
 
     override fun onPhysicalInteraction(event: PlayerInteractEvent?) {
