@@ -25,6 +25,7 @@ class StorageBusGui(
         val state = block.state as? TileState ?: return
         val pdc = state.persistentDataContainer
         inventory.storageContents = ItemsFactory.gson.fromJson(pdc.get(key, PersistentDataType.STRING), Array<ItemStack>::class.java)
+        state.update(true)
     }
 
     fun saveToBlock() {
